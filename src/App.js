@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import RjImage from './images/boy.png'
+import './App.css'
+import CurrentPlayContainer from './component/CurrentPlay'
+import AlbumListContainer from './component/AlbumList'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='Album'>
+      <header className='Album-header'>
+        <img src={RjImage} className='Album-logo' alt='logo' />
       </header>
+      <CurrentPlayContainer />
+      <AlbumListContainer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

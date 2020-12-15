@@ -1,38 +1,112 @@
-.App {
+.Album-header {
+  background-color: #f3efee;
+  height: 200px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Album-logo {
+  max-width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.current-left,
+.current-right,
+.album-left,
+.album-right {
+  padding: 0 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.album-list,
+.track-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.album-item {
+  padding: 0px 0 15px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.album-name span {
+  padding-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.album-btn {
+  border: 0;
+  color: #826c61;
+  background-color: #e5dddc;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 7px 15px;
+}
+
+.play-btn {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.track-item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 0 15px 30px;
+}
+
+.prev-btn {
+  background-image: url('./images/next.png');
+  background-position: center;
+  background-color: transparent;
+  border: 0;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 39px;
+  display: inline-block;
+  font-size: 0;
+  background-size: contain;
+  vertical-align: middle;
+  transform: rotate(180deg);
+}
+
+.next-btn {
+  background-image: url('./images/next.png');
+  background-image: url('./images/next.png');
+  background-position: center;
+  background-color: transparent;
+  border: 0;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 39px;
+  display: inline-block;
+  font-size: 0;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.current-track {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+@media only screen and (min-width: 990px) {
+  .current-container,
+  .album-container {
+    display: flex;
+    flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+
+  .current-left,
+  .current-right,
+  .album-left,
+  .album-right {
+    flex: 1 1 50%;
+    padding: 0 30px;
   }
 }
